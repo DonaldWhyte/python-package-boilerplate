@@ -1,5 +1,5 @@
 from nose.tools import *
-import proj
+import PACKAGE_NAME
 
 
 def setup():
@@ -11,4 +11,4 @@ def teardown():
 
 
 def test_basic():
-    print "I RAN!"
+    PACKAGE_NAME.hello()

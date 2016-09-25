@@ -11,9 +11,9 @@ config = {
     'author_email': 'My email.',
     'version': '0.1',
     'install_requires': ['nose'],
-    'packages': ['proj'],
-    'scripts': ['bin/proj_script.py'],
-    'name': 'projectname'
+    'packages': ['PACKAGE_NAME'],
+    'scripts': ['bin/script.py'],
+    'name': 'PACKAGE_NAME'
 }
 
 setup(**config)
