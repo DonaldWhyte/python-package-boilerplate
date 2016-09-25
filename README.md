@@ -11,7 +11,7 @@ Features:
     - builds against 2.7 and all 3.0+ versions
 * .gitignore file
 * `validate.sh` script for running unit tests and pep8 and pep257 validators
-    - run in Travis buil
+    - run in Travis build
 * `setup.py` to install package and scripts
 
 ## How to Generate Boilerplate
