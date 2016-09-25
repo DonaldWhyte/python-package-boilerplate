@@ -22,17 +22,18 @@ def getAllFilesInDir(directory):
 
 
 def createProjectFiles(templateDir, destinationDir, projectName):
-    os.mkdir(projectName)
+    os.mkdir(destinationDir)
 
     files, dirs = getAllFilesInDir(templateDir)
     for srcDir in dirs:
-        destDir = srcDir.replace(TEMPLATE_DIR, projectName)
+        destDir = srcDir.replace(TEMPLATE_DIR, destinationDir)
         destDir = destDir.replace(PACKAGE_NAME_PLACEHOLDER, projectName)
         os.mkdir(destDir)
     for srcFile in files:
-        destFile = srcFile.replace(TEMPLATE_DIR, projectName)
+        destFile = srcFile.replace(TEMPLATE_DIR, destinationDir)
         destFile = destFile.replace(PACKAGE_NAME_PLACEHOLDER, projectName)
         shutil.copyfile(srcFile, destFile)
+        shutil.copymode(srcFile, destFile) # ensures executable bits are copied
 
 
 def replaceTextInFile(filename, textToReplace, newText):
