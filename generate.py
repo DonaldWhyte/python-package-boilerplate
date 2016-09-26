@@ -63,11 +63,12 @@ def createProjectBoilerplate(templateDir, projectName, projectDir=None):
 
 if __name__ == '__main__':
     # Parse command lime arguments
-    parser = argparse.ArgumentParser(description='todo')
+    parser = argparse.ArgumentParser(
+        description='Generate Python package/script boilerplate')
     parser.add_argument('package_name', type=str,
-                        help='TODO')
+                        help='name of top-level package of project')
     parser.add_argument('-o', '--outputDir', dest='output_dir', type=str,
-                        help='directory output ')
+                        help='directory to store generated project files')
     args = parser.parse_args()
 
     # Generate package
